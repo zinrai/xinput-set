@@ -1,0 +1,18 @@
+profiles:
+  thinkpad_trackpoint:
+    description: "Lenovo ThinkPad USB Keyboard with TrackPoint"
+    detection:
+      filter:
+        name_contains: "Lenovo ThinkPad Compact USB Keyboard with TrackPoint"
+      validation:
+        has_properties:
+          - "libinput Accel Speed"
+    actions:
+      - command: "set-prop"
+        args: "libinput Accel Speed 0.5"
+      
+      - command: "set-prop"
+        args: "Coordinate Transformation Matrix 1 0 0 0 1 0 0 0 0.5"
+      
+      - command: "set-button-map"
+        args: "1 0 3 4 5 6 7"
