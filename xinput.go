@@ -33,11 +33,3 @@ func CheckXinput() error {
 	}
 	return nil
 }
-
-// init checks for xinput availability when the program starts
-func init() {
-	if err := CheckXinput(); err != nil {
-		fmt.Println("Error:", err)
-		panic(err)
-	}
-}

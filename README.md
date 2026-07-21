@@ -42,6 +42,12 @@ Dry-run mode (show commands without executing)
 $ xinput-set -config examples/thinkpad-usb.yaml -dry-run
 ```
 
+Show version information
+
+```bash
+$ xinput-set -version
+```
+
 ### Configuration
 
 See [examples/thinkpad-usb.yaml](examples/thinkpad-usb.yaml) for a complete example.
@@ -52,7 +58,7 @@ The configuration uses a simple structure:
 - **detection**: How to find and validate devices
 - **actions**: List of xinput commands to execute
 
-The `args` field is intelligently parsed - property names with spaces are automatically handled.
+For `set-prop`, the `args` field is split by taking everything before the first numeric token as the property name, so a property name containing spaces (for example `libinput Accel Speed`) is kept as one argument.
 
 ## Example output
 
