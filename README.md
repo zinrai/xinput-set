@@ -11,12 +11,6 @@ A declarative configuration tool for xinput devices. Define your input device se
 - Stops on error (device not found, validation failed)
 - Support for any xinput subcommand
 
-## Installation
-
-```bash
-$ go install github.com/zinrai/xinput-set@latest
-```
-
 ## Requirements
 
 - `xinput` command-line tool
